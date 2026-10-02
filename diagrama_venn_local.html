@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualizador de Diagrama de Venn - UNI</title>
+    <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 p-6 min-h-screen flex flex-col items-center justify-center">
+    <div class="max-w-4xl w-full bg-slate-800 border border-slate-700 rounded-2xl p-6 shadow-2xl space-y-6">
+        <div class="border-b border-slate-700 pb-4 flex justify-between items-center">
+            <div>
+                <h1 class="text-2xl font-black text-blue-400">UNIVERSIDAD NACIONAL DE INGENIERIA</h1>
+                <p class="text-slate-400 text-sm">Visualizador del Diagrama de Venn (2 Conjuntos - Validados en U)</p>
+            </div>
+            <span class="bg-blue-500/10 text-blue-400 border border-blue-500/20 px-3 py-1 rounded-full text-xs font-semibold">Laboratorio #2</span>
+        </div>
+        <div class="bg-slate-900 border border-slate-700 rounded-xl p-4 flex flex-col items-center">
+            <h2 class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-4">Diagrama de Venn Validado</h2>
+            
+        <svg viewBox="0 0 450 260" class="w-full h-64">
+            <!-- Universo -->
+            <rect x="10" y="10" width="430" height="240" rx="12" fill="none" stroke="currentColor" stroke-dasharray="4" class="text-[var(--border)]" stroke-width="2"/>
+            <text x="25" y="32" class="fill-slate-400 text-xs font-bold">Universo (U)</text>
+            
+            <!-- Círculo A -->
+            <circle cx="160" cy="130" r="80" fill="rgba(59, 130, 246, 0.25)" stroke="#3b82f6" stroke-width="2.5"/>
+            <text x="110" y="70" class="fill-blue-500 font-bold text-sm">Conjunto A</text>
+            <!-- Círculo B -->
+            <circle cx="270" cy="130" r="80" fill="rgba(236, 72, 153, 0.25)" stroke="#ec4899" stroke-width="2.5"/>
+            <text x="280" y="70" class="fill-pink-500 font-bold text-sm">Conjunto B</text>
+            <!-- Textos Regiones -->
+            <text x="130" y="135" text-anchor="middle" class="fill-slate-100 text-xs font-semibold">1, 2, 3, 5</text>
+            <text x="215" y="135" text-anchor="middle" class="fill-amber-400 text-xs font-bold">∅</text>
+            <text x="300" y="135" text-anchor="middle" class="fill-slate-100 text-xs font-semibold">10, 6, 8, 9</text>
+            <text x="215" y="230" text-anchor="middle" class="fill-slate-400 text-xs font-mono">Fuera (A u B)': { 4, 7 }</text>
+        </svg>
+        
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-mono">
+            <div class="bg-slate-900/50 p-4 rounded-xl border border-slate-700 space-y-1">
+                <p class="text-slate-400 font-bold uppercase mb-2">Resumen de Conjuntos</p>
+                <p><span class="text-blue-400 font-bold">Universo (U):</span> { 1, 10, 2, 3, 4, 5, 6, 7, 8, 9 }</p>
+                <p><span class="text-blue-400 font-bold">Conjunto A:</span> { 1, 2, 3, 5 }</p>
+                <p><span class="text-pink-400 font-bold">Conjunto B:</span> { 10, 6, 8, 9 }</p>
+                
+            </div>
+            <div class="bg-slate-900/50 p-4 rounded-xl border border-slate-700 space-y-1">
+                <p class="text-slate-400 font-bold uppercase mb-2">Operaciones Principales</p>
+                <p><span class="text-amber-400 font-bold">Unión:</span> { 1, 10, 2, 3, 5, 6, 8, 9 }</p>
+                <p><span class="text-purple-400 font-bold">Intersección General:</span> {  }</p>
+                <p><span class="text-cyan-400 font-bold">Complemento A' (U - A):</span> { 10, 4, 6, 7, 8, 9 }</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
